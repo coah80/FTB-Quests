@@ -18,6 +18,7 @@ import dev.ftb.mods.ftbquests.client.FTBQuestsClientConfig;
 import dev.ftb.mods.ftbquests.client.gui.ChangeChapterGroupScreen;
 import dev.ftb.mods.ftbquests.client.gui.ContextMenuBuilder;
 import dev.ftb.mods.ftbquests.client.gui.CustomToast;
+import dev.ftb.mods.ftbquests.client.gui.GeminiQuestGeneratorScreen;
 import dev.ftb.mods.ftbquests.net.CreateObjectMessage;
 import dev.ftb.mods.ftbquests.net.MoveChapterGroupMessage;
 import dev.ftb.mods.ftbquests.net.MoveChapterMessage;
@@ -452,7 +453,9 @@ public class ChapterPanel extends Panel {
 								b -> NetworkManager.sendToServer(new MoveChapterMessage(chapter.id, false)))
 								.setEnabled(chapter.getIndex() < chapter.getGroup().getChapters().size() - 1).setCloseMenu(false),
 						new ContextMenuItem(Component.translatable("ftbquests.gui.change_group"), Icons.COLOR_RGB,
-								b -> new ChangeChapterGroupScreen(chapter, chapterPanel.questScreen).openGui())
+								b -> new ChangeChapterGroupScreen(chapter, chapterPanel.questScreen).openGui()),
+						new ContextMenuItem(Component.translatable("ftbquests.ai.menu.generate_quests"), Icons.ART,
+								b -> new GeminiQuestGeneratorScreen(chapter).openGui())
 				)).openContextMenu(chapterPanel.questScreen);
 			}
 		}
