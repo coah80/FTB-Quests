@@ -1,12 +1,10 @@
 package dev.ftb.mods.ftbquests.client.gui;
 
 import dev.ftb.mods.ftblibrary.config.manager.ConfigManager;
-import dev.ftb.mods.ftblibrary.icon.Color4I;
 import dev.ftb.mods.ftblibrary.icon.Icons;
 import dev.ftb.mods.ftblibrary.ui.*;
 import dev.ftb.mods.ftblibrary.ui.input.MouseButton;
 import dev.ftb.mods.ftblibrary.util.TooltipList;
-import dev.ftb.mods.ftbquests.ai.GeminiApiClient;
 import dev.ftb.mods.ftbquests.ai.GeminiConfig;
 import dev.ftb.mods.ftbquests.ai.QuestGeneratorService;
 import dev.ftb.mods.ftbquests.client.ClientQuestFile;
